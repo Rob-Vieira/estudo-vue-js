@@ -1,5 +1,7 @@
 # guia-clientes
 
+Primeiro projeto de VUE.
+
 ## Project setup
 ```
 npm install
