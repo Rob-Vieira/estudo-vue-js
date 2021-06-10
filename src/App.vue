@@ -1,28 +1,51 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Guia Clientes</h1>
+    <Cliente :cliente="cliente01" :show="true" :isPremium="true"/>
+    <Cliente :cliente="cliente02" :show="true"/>
+    <Cliente :cliente="cliente03" :show="false"/>
+    <Cliente :cliente="cliente01" :show="true"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Cliente from './components/Cliente'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Cliente
+  },
+  data(){
+    return{
+      cliente01: {
+        nome: "Robson Vieira",
+        idade: 21,
+        cel: 992033717,
+        end: "Barra Mansa - RJ",
+        email: "robson@gmail.com",
+        desc: "Nosso melhor cliente."
+      },
+      cliente02: {
+        nome: "Jorge goge",
+        idade: 32,
+        cel: 996453717,
+        end: "Barra Mansa - RJ",
+        email: "jorge@gmail.com",
+        desc: "Nosso melhor cliente."
+      },
+      cliente03: {
+        nome: "Biatriz Vonce",
+        idade: 200,
+        cel: 993343717,
+        end: "Barra Mansa - RJ",
+        email: "bia@gmail.com",
+        desc: "Nosso melhor cliente."
+      }
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
